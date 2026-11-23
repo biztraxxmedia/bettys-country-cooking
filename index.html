@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Betty's Country Cooking | Columbia, KY | Home of the Famous Sand Pie</title>
+<meta name="description" content="Betty's Country Cooking in Columbia, Kentucky. Breakfast, lunch and dinner, a hot country buffet, homemade pies, and our Famous Sand Pie. Save Room for Betty's!">
+<meta property="og:title" content="Betty's Country Cooking">
+<meta property="og:description" content="Hot country buffet and homemade pies in Columbia, KY. Save Room for Betty's!">
+<meta property="og:image" content="images/sand-pie.webp">
+<meta name="theme-color" content="#a8322d">
+<link rel="icon" href="images/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="images/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Betty's">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Lora:ital,wght@0,500;0,700;1,500&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf3e4;--sand:#e9dcc3;--wheat:#c9b38c;--oak:#8a7350;--red:#a8322d;--red-d:#86241f;--gold:#f2c14e;--brown:#4a2a1a;--r:22px;--shadow:0 18px 40px -18px rgba(74,42,26,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--brown);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Alfa Slab One',Georgia,serif;font-weight:400;line-height:1.1;letter-spacing:.3px}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+.eyebrow{font-family:'Lora',serif;font-style:italic;font-weight:500;color:var(--red);font-size:1.05rem;display:inline-flex;align-items:center;gap:10px}
+.eyebrow:before,.eyebrow:after{content:"";width:26px;height:2px;background:var(--gold);border-radius:2px}
+.gingham{background-color:var(--cream);background-image:linear-gradient(90deg,rgba(168,50,45,.05) 50%,transparent 50%),linear-gradient(rgba(168,50,45,.05) 50%,transparent 50%);background-size:28px 28px}
+.gingham-strip{height:14px;background-color:#fff;background-image:linear-gradient(90deg,rgba(168,50,45,.55) 50%,transparent 50%),linear-gradient(rgba(168,50,45,.55) 50%,transparent 50%);background-size:14px 14px;opacity:.8}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;font-weight:800;font-size:1rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn svg{width:19px;height:19px;flex:none}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 22px -10px rgba(168,50,45,.8)}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-ghost{background:#fff;color:var(--brown);border-color:var(--wheat)}
+.btn-ghost:hover{border-color:var(--brown);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--brown)}
+.btn-gold:hover{transform:translateY(-2px);background:#f5cd6a}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(251,243,228,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,179,140,.5)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:14px}
+.nav .logo img{height:52px;width:auto}
+.nav ul{display:none;list-style:none;gap:28px;font-weight:700}
+.nav ul a{text-decoration:none;font-size:.95rem;position:relative}
+.nav ul a:after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--red);transition:width .25s}
+.nav ul a:hover:after{width:100%}
+.nav .btn{padding:10px 16px;font-size:.9rem}
+.nav .btn span{display:none}
+@media(min-width:420px){.nav .btn span{display:inline}}
+@media(min-width:900px){.nav ul{display:flex}.nav .logo img{height:56px}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:42px 0 64px}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 45%,rgba(242,193,78,.35),transparent 60%);pointer-events:none}
+.hero-grid{position:relative;display:grid;gap:22px;align-items:center}
+.hero-text{text-align:center}
+.hero h1{font-size:clamp(2.6rem,11vw,5.2rem);color:var(--red);margin:12px 0 14px;text-shadow:3px 3px 0 rgba(242,193,78,.55)}
+.hero h1 span{display:block;color:var(--brown);font-size:.42em;letter-spacing:1px;text-shadow:none;margin-bottom:6px;font-family:'Lora',serif;font-style:italic;font-weight:700}
+.hero p.lead{font-size:1.12rem;max-width:520px;margin:0 auto 26px;color:#5d3d2b}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cta .btn{flex:1 1 180px;max-width:260px}
+.hero-pie{position:relative;max-width:440px;margin:0 auto;width:100%}
+.hero-pie .plate{position:relative;z-index:2;filter:drop-shadow(0 26px 30px rgba(74,42,26,.35));animation:float 6s ease-in-out infinite}
+.hero-pie .halo{position:absolute;inset:8% 4% 2%;border-radius:50%;background:var(--sand);border:3px dashed var(--wheat);z-index:1}
+.badge{position:absolute;z-index:3;right:2%;top:2%;width:112px;height:112px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;text-align:center;font-family:'Alfa Slab One',serif;font-size:.95rem;line-height:1.05;transform:rotate(12deg);box-shadow:0 0 0 5px var(--cream),0 0 0 7px var(--red),var(--shadow);padding:10px}
+.badge small{display:block;font-family:'Lora',serif;font-style:italic;font-size:.75rem;color:var(--gold)}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+@media(min-width:900px){.hero{padding:70px 0 90px}.hero-grid{grid-template-columns:1.05fr 1fr}.hero-text{text-align:left}.hero p.lead{margin-left:0}.cta{justify-content:flex-start}.badge{width:136px;height:136px;font-size:1.1rem}}
+
+/* jingle (nav) */
+.nav-r{display:flex;align-items:center;gap:8px;flex:none}
+.jingle{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--wheat);border-radius:999px;padding:4px;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--brown);font-family:inherit;transition:border-color .2s;white-space:nowrap}
+.jingle:hover{border-color:var(--red)}
+.jingle .ic{width:34px;height:34px;border-radius:50%;background:var(--gold);display:grid;place-items:center;flex:none}
+.jingle .ic svg{width:15px;height:15px}
+.jingle #jtext{display:none}
+.jingle .bars{display:none;gap:3px;align-items:flex-end;height:14px;padding-right:6px}
+.jingle .bars i{width:3px;background:var(--red);border-radius:2px;animation:eq .9s ease-in-out infinite}
+.jingle .bars i:nth-child(2){animation-delay:.2s}.jingle .bars i:nth-child(3){animation-delay:.4s}
+.jingle.playing .bars{display:inline-flex}
+@media(min-width:900px){.jingle{padding:4px 14px 4px 4px}.jingle #jtext{display:inline}.jingle .bars{padding-right:0}}
+@keyframes eq{0%,100%{height:4px}50%{height:14px}}
+
+/* video */
+.watch{padding-top:64px}
+.vcard{max-width:960px;margin:0 auto;background:#fff;border-radius:var(--r);padding:10px;box-shadow:var(--shadow);border:1px solid var(--sand)}
+.vcard video{display:block;width:100%;height:auto;aspect-ratio:1280/882;border-radius:calc(var(--r) - 8px);background:var(--brown);object-fit:cover}
+
+/* storefront */
+.storefront{margin:0 0 26px;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;position:relative}
+.storefront img{width:100%;aspect-ratio:1600/811;object-fit:cover}
+.storefront figcaption{position:absolute;left:14px;bottom:14px;background:var(--red);color:#fff;font-family:'Alfa Slab One',serif;padding:6px 14px;border-radius:999px;font-size:.95rem}
+
+/* sections */
+section{padding:72px 0}
+.head{text-align:center;max-width:680px;margin:0 auto 40px}
+.head h2{font-size:clamp(2rem,7vw,3.1rem);margin:10px 0 12px}
+.head p{color:#5d3d2b;font-size:1.06rem}
+
+/* sand pie feature */
+.feature{background:var(--brown);color:var(--cream);position:relative;overflow:hidden}
+.feature .eyebrow{color:var(--gold)}
+.feature-grid{display:grid;gap:34px;align-items:center}
+.feature h2{font-size:clamp(2.1rem,7vw,3.4rem);color:#fff;margin:12px 0 16px}
+.feature h2 em{color:var(--gold);font-style:normal}
+.feature p{color:#eadcc6;font-size:1.08rem;margin-bottom:16px}
+.feature .pie-wrap{position:relative;max-width:480px;margin:0 auto}
+.feature .pie-wrap:before{content:"";position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,rgba(242,193,78,.45),transparent 68%)}
+.feature .pie-wrap img{position:relative;filter:drop-shadow(0 30px 30px rgba(0,0,0,.45))}
+.ticks{list-style:none;display:grid;gap:10px;margin:20px 0 28px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li:before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234a2a1a' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/14px no-repeat}
+@media(min-width:900px){.feature-grid{grid-template-columns:1fr 1fr}.feature{padding:96px 0}}
+
+/* buffet */
+.tabs{display:flex;justify-content:center;gap:8px;margin:-14px 0 30px;flex-wrap:wrap}
+.tabs span{background:#fff;border:1px solid var(--wheat);border-radius:999px;padding:7px 16px;font-weight:700;font-size:.88rem}
+.gallery{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+.card{background:var(--cream);border:1px solid var(--sand);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.card .ph{position:relative;background:radial-gradient(circle at 50% 40%,#fffaf0,var(--sand));aspect-ratio:3/4}
+.card .ph img{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);object-fit:contain}
+.card .cap{flex:1}
+.card .cap{padding:12px 14px 16px;border-top:1px solid var(--sand);background:#fff}
+.card .cap b{font-family:'Alfa Slab One',serif;font-weight:400;font-size:1.05rem;display:block;color:var(--red)}
+.card .cap small{color:var(--oak);font-weight:600;font-size:.85rem;line-height:1.35;display:block}
+@media(min-width:900px){.gallery{grid-template-columns:repeat(4,1fr);gap:24px}}
+
+/* pies */
+.pies{background:var(--sand)}
+.pie-list{display:grid;gap:14px;grid-template-columns:1fr;max-width:900px;margin:0 auto}
+.pie-item{display:flex;align-items:center;gap:16px;background:var(--cream);border-radius:16px;padding:16px 20px;border:1px solid var(--wheat);transition:transform .2s,border-color .2s}
+.pie-item:hover{transform:translateX(4px);border-color:var(--red)}
+.pie-item .dot{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px dashed var(--wheat);font-size:1.4rem}
+.pie-item h3{font-size:1.15rem}
+.pie-item p{font-size:.9rem;color:var(--oak);font-weight:600}
+.pie-item.star{background:var(--red);color:#fff;border-color:var(--red)}
+.pie-item.star p{color:var(--gold)}
+.pie-item.star .dot{background:var(--gold);border-color:var(--gold)}
+.pie-note{text-align:center;margin-top:26px;font-family:'Lora',serif;font-style:italic;font-size:1.1rem}
+@media(min-width:700px){.pie-list{grid-template-columns:1fr 1fr}.pie-item.star{grid-column:1/-1}}
+
+/* visit */
+.visit-grid{display:grid;gap:26px}
+.info{background:#fff;border-radius:var(--r);padding:30px 26px;box-shadow:var(--shadow);border:1px solid var(--sand)}
+.info img.lg{max-width:240px;width:100%;margin:0 auto 22px}
+.row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px dashed var(--wheat)}
+.row svg{flex:none;width:24px;height:24px;color:var(--red);margin-top:3px}
+.row b{display:block;font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--oak)}
+.row a,.row span{font-size:1.1rem;font-weight:700;text-decoration:none}
+.row a:hover{color:var(--red)}
+.info .cta{margin-top:20px}
+.map{border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff;min-height:340px;background:var(--sand)}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+@media(min-width:900px){.visit-grid{grid-template-columns:.9fr 1.1fr}}
+
+/* banner */
+.banner{background:var(--red);color:#fff;text-align:center;padding:56px 0}
+.banner h2{font-size:clamp(2rem,7vw,3.2rem);margin-bottom:10px}
+.banner p{color:#f7dcd0;margin-bottom:24px;font-size:1.08rem}
+.banner .cta{justify-content:center}
+
+footer{background:var(--brown);color:#d8c7aa;text-align:center;padding:34px 0;font-size:.92rem}
+footer .f{display:flex;flex-direction:column;gap:6px;align-items:center}
+footer a{text-decoration:none;color:var(--gold)}
+
+/* mobile call bar */
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex;gap:10px}
+.callbar .btn{flex:1;padding:13px 10px;box-shadow:0 12px 26px -8px rgba(0,0,0,.45)}
+@media(min-width:900px){.callbar{display:none}}
+@media(max-width:899px){footer{padding-bottom:96px}}
+
+/* reveal: only hidden when JS has confirmed it is running */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}.hero-pie .plate{animation:none}html{scroll-behavior:auto}}
+
+/* ===== v4 premium ambient motion ===== */
+.hero>.wrap{z-index:2}
+.fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1}
+.sun-glow{position:absolute;left:-220px;top:-220px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,226,140,.85) 0%,rgba(255,206,110,.45) 28%,rgba(242,193,78,.12) 55%,transparent 70%);animation:glow 7s ease-in-out infinite;will-change:transform,opacity}
+.rays{position:absolute;left:-40px;top:-40px;width:1300px;height:1300px;transform-origin:0 0;will-change:transform,opacity;
+  background:repeating-conic-gradient(from 95deg at 0 0,rgba(255,231,160,.0) 0deg,rgba(255,231,160,.55) 3deg,rgba(255,231,160,0) 7deg,rgba(255,231,160,0) 11deg);
+  -webkit-mask-image:radial-gradient(circle at 0 0,#000 0%,rgba(0,0,0,.6) 35%,transparent 72%);mask-image:radial-gradient(circle at 0 0,#000 0%,rgba(0,0,0,.6) 35%,transparent 72%);
+  opacity:.7;animation:raysTurn 24s ease-in-out infinite,breathe 6s ease-in-out infinite}
+.rays.r2{background:repeating-conic-gradient(from 100deg at 0 0,rgba(255,244,205,0) 0deg,rgba(255,244,205,.5) 5deg,rgba(255,244,205,0) 12deg,rgba(255,244,205,0) 17deg);animation:raysTurn2 31s ease-in-out infinite,breathe 8s ease-in-out -3s infinite}
+@keyframes raysTurn2{0%,100%{transform:rotate(4deg)}50%{transform:rotate(-5deg)}}
+@keyframes raysTurn{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(5deg)}}
+@keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+@keyframes glow{0%,100%{transform:scale(1);opacity:.85}50%{transform:scale(1.08);opacity:1}}
+#motes{position:absolute;inset:0;width:100%;height:100%}
+/* steam */
+.steam{position:absolute;left:30%;top:4%;width:40%;height:40%;z-index:3;pointer-events:none}
+.steam span{position:absolute;bottom:0;width:38%;height:70%;border-radius:50%;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.75),rgba(255,255,255,0) 65%);opacity:0;animation:steam 5.5s ease-out infinite;will-change:transform,opacity}
+.steam span:nth-child(1){left:8%}
+.steam span:nth-child(2){left:34%;animation-delay:1.8s}
+.steam span:nth-child(3){left:58%;animation-delay:3.6s}
+@keyframes steam{0%{transform:translate3d(0,30%,0) scale(.6,.8);opacity:0}25%{opacity:.75}100%{transform:translate3d(12%,-70%,0) scale(1.2,1.4);opacity:0}}
+.hero-pie .parallax{position:relative;z-index:2;will-change:transform;transition:transform .1s linear}
+/* sheen */
+.sheen{position:relative;overflow:hidden;isolation:isolate}
+.sheen:after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:45%;pointer-events:none;z-index:5;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 70%,transparent 100%);transform:translate3d(-160%,0,0) skewX(-12deg);animation:sheen 7s cubic-bezier(.4,0,.2,1) infinite;animation-delay:var(--d,0s);animation-play-state:paused;opacity:0}
+.sheen.lit:after{animation-play-state:running;opacity:1}
+@keyframes sheen{0%{transform:translate3d(-160%,0,0) skewX(-12deg)}18%,100%{transform:translate3d(330%,0,0) skewX(-12deg)}}
+.btn.sheen:after{width:35%;background:linear-gradient(105deg,transparent 25%,rgba(255,255,255,.45) 50%,transparent 75%)}
+.nav .logo.sheen{display:block;border-radius:10px}
+.pie-shine{position:relative;border-radius:50%;overflow:hidden}
+/* gold shimmer accent */
+.feature h2 em,.shimmer{background:linear-gradient(100deg,#e9ae2c 0%,#f2c14e 30%,#fff3c4 50%,#f2c14e 70%,#e9ae2c 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shimmer 6s linear infinite}
+@keyframes shimmer{0%{background-position:100% 0}100%{background-position:-150% 0}}
+.eyebrow:before,.eyebrow:after{background:linear-gradient(90deg,var(--gold),#fff1c2,var(--gold));background-size:200% 100%;animation:shimmer 4s linear infinite}
+/* call pulse */
+.nav .btn-red{position:relative;overflow:visible}
+.nav .btn-red:before{content:"";position:absolute;inset:0;border-radius:inherit;border:2px solid var(--red);opacity:0;animation:pulse 2.8s ease-out infinite;pointer-events:none}
+@keyframes pulse{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(1.12,1.4);opacity:0}}
+/* richer hover lift */
+.card,.vcard,.storefront,.info{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover,.vcard:hover,.storefront:hover{transform:translateY(-6px);box-shadow:0 28px 50px -22px rgba(74,42,26,.5)}
+.feature{isolation:isolate}
+.feature:before{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(242,193,78,.22),transparent 65%);animation:glow 8s ease-in-out infinite;pointer-events:none;z-index:-1}
+/* ===== v5 additions ===== */
+.more-vids{display:grid;gap:20px;margin-top:26px;grid-template-columns:1fr 1fr;max-width:900px;margin-left:auto;margin-right:auto}
+.more-vids .vc{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--sand)}
+.more-vids video{width:100%;display:block;background:#000;aspect-ratio:16/9;object-fit:contain}
+.more-vids .vc.tall video{aspect-ratio:auto;max-height:560px}
+.more-vids .vc>p{padding:10px 14px;font-weight:800;font-size:.9rem;color:var(--red)}
+.poem{padding:6px 26px 26px;text-align:center;font-family:'Lora',serif;font-style:italic;font-size:1.08rem;line-height:1.7;color:var(--brown)}
+.poem p{margin:0 0 14px}
+.poem p:before{content:none}
+.poem .since{font-family:'Alfa Slab One',serif;font-style:normal;color:var(--red);letter-spacing:1px}
+.poem em{color:var(--red);font-weight:700}
+.poem .sig{font-weight:700}
+.poem .go{font-family:'Alfa Slab One',serif;font-style:normal;font-size:1.5rem;color:var(--red);margin:0}
+@media(max-width:640px){.more-vids{grid-template-columns:1fr}}
+/* story */
+.story{background:var(--brown);color:var(--cream)}
+.story .head h2{color:#fff}.story .head p{color:#eadcc6}.story .eyebrow{color:var(--gold)}
+.story-grid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+.st{position:relative;border-radius:var(--r);overflow:hidden;min-height:260px;box-shadow:0 20px 40px -20px rgba(0,0,0,.6)}
+.st img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 6s ease}
+.st:hover img{transform:scale(1.06)}
+.st .tx{position:absolute;left:0;right:0;bottom:0;padding:60px 20px 18px;background:linear-gradient(transparent,rgba(30,16,8,.88))}
+.st h3{font-size:1.35rem;color:#fff;margin-bottom:4px}.st p{font-size:.95rem;color:#f1e4cc;line-height:1.45}
+.st.big{grid-column:1/-1;min-height:380px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 26px}
+.stats div{background:rgba(255,255,255,.06);border:1px solid rgba(242,193,78,.3);border-radius:16px;padding:16px 10px;text-align:center}
+.stats b{display:block;font-family:'Alfa Slab One',serif;font-weight:400;font-size:clamp(1.5rem,5vw,2.3rem);color:var(--gold)}
+.stats span{font-size:.85rem;color:#eadcc6;font-weight:700}
+@media(min-width:900px){.story-grid{grid-template-columns:repeat(3,1fr)}.st.big{grid-column:span 2;grid-row:span 2;min-height:540px}.story-grid .st:last-child{grid-column:1/-1;min-height:320px}}
+/* kitchen strip */
+.kitchen{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:30px}
+.kitchen img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}
+@media(max-width:640px){.kitchen{grid-template-columns:repeat(2,1fr)}}
+/* menu */
+.menu{background:var(--cream)}
+.known{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:-10px 0 28px}
+.known span{background:var(--gold);color:var(--brown);border-radius:999px;padding:6px 14px;font-weight:800;font-size:.85rem}
+.feat{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;margin-bottom:22px}
+.feat figure{flex:0 0 210px;scroll-snap-align:start;background:#fff;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--sand)}
+.feat img{width:100%;aspect-ratio:1;object-fit:cover}
+.feat figcaption{padding:10px 12px}.feat b{display:block;font-weight:800;line-height:1.25}.feat small{color:var(--red);font-weight:800}
+.mtabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:24px;position:sticky;top:72px;z-index:5;padding:8px 0;background:var(--cream)}
+.mtabs button{font:inherit;font-weight:800;font-size:.92rem;padding:10px 18px;border-radius:999px;border:2px solid var(--wheat);background:#fff;color:var(--brown);cursor:pointer;transition:all .2s}
+.mtabs button[aria-selected=true]{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 10px 22px -10px rgba(168,50,45,.8)}
+.mgrid{display:grid;gap:14px}
+@media(min-width:800px){.mgrid{grid-template-columns:1fr 1fr}}
+.mi{display:flex;background:#fff;border:1px solid var(--sand);border-radius:18px;overflow:hidden;min-height:128px;transition:transform .2s,border-color .2s;animation:pop .35s ease both}
+.mi:hover{transform:translateY(-3px);border-color:var(--red)}
+.mi .t{flex:1;padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.mi h3{font-family:'Nunito Sans',sans-serif;font-weight:800;font-size:1.08rem}
+.mi p{font-size:.9rem;color:var(--oak);line-height:1.4;flex:1}
+.mi .pr{font-weight:800;color:var(--red)}
+.mi img{width:128px;flex:none;object-fit:cover}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.mnote{text-align:center;margin-top:24px;font-family:'Lora',serif;font-style:italic}
+/* game */
+.game{background:linear-gradient(#ffe7a8,#fbf3e4 60%)}
+.gwrap{position:relative;max-width:760px;margin:0 auto;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -25px rgba(74,42,26,.6);border:6px solid #fff;background:#fff3d6;touch-action:none}
+#gc{display:block;width:100%;height:auto;aspect-ratio:4/3;cursor:none}
+.ghud{position:absolute;top:10px;left:12px;right:12px;display:flex;justify-content:space-between;font-family:'Alfa Slab One',serif;color:var(--brown);font-size:1.1rem;pointer-events:none;text-shadow:0 2px 0 #fff}
+.gov{position:absolute;inset:0;display:grid;place-items:center;text-align:center;background:rgba(74,42,26,.72);color:#fff;padding:20px}
+.gov h3{font-size:clamp(1.6rem,6vw,2.6rem);color:var(--gold);margin-bottom:8px}
+.gov p{margin-bottom:18px;color:#f6e7cb;max-width:420px}
+.gov[hidden]{display:none}
+.ghelp{text-align:center;margin-top:14px;font-weight:700;color:var(--oak);font-size:.92rem}
+/* sound chip */
+.snd{position:fixed;right:14px;bottom:84px;z-index:70;width:48px;height:48px;border-radius:50%;border:0;background:var(--brown);color:var(--gold);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 24px -8px rgba(0,0,0,.5);opacity:0;transform:scale(.6);transition:all .3s}
+.snd.on{opacity:1;transform:none}.snd svg{width:22px;height:22px}
+@media(min-width:900px){.snd{bottom:20px}}
+/* open/closed */
+.openpill{display:inline-flex;align-items:center;gap:12px;text-decoration:none;background:#fff;border:2px solid var(--wheat);border-radius:999px;padding:6px 18px 6px 6px;margin-bottom:14px;box-shadow:var(--shadow);transition:transform .2s}
+.openpill:hover{transform:translateY(-2px)}
+.openpill b{display:block;font-weight:800;font-size:1rem;line-height:1.2}.openpill small{display:block;font-size:.8rem;color:var(--oak);font-weight:700}
+.openpill.open b{color:#2f7a2f}.openpill.closed b{color:#3b3f78}
+.sky{width:54px;height:54px;border-radius:50%;flex:none;display:grid;place-items:center;overflow:hidden;transition:background .6s}
+.open .sky{background:radial-gradient(circle,#fff6d6,#ffd36b)}
+.closed .sky{background:radial-gradient(circle at 60% 40%,#3c4a8c,#141a3d)}
+.sky svg{width:50px;height:50px}
+.sunsvg .srays{animation:spin 14s linear infinite;transform-origin:50px 50px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.moonsvg{animation:bob 4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-2px) rotate(-4deg)}}
+.moonsvg .tw{animation:tw 2s ease-in-out infinite}.moonsvg .tw:nth-child(2){animation-delay:.7s}@keyframes tw{50%{opacity:.2}}
+.hours{list-style:none;margin-top:6px;display:grid;gap:2px}
+.hours li{display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:.98rem;padding:3px 8px;border-radius:8px}
+.hours li.today{background:var(--gold);color:var(--brown)}
+/* facebook */
+.fb{background:var(--sand)}
+.fb-grid{display:grid;gap:30px;align-items:center}
+.fb h2{font-size:clamp(2rem,6vw,3rem);margin:10px 0 12px;color:var(--red)}
+.fb p{font-size:1.08rem;margin-bottom:22px}
+.qr{display:block;max-width:360px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 30px 50px -25px rgba(74,42,26,.6);transform:rotate(-2deg);transition:transform .3s}
+.qr:hover{transform:rotate(0) scale(1.03)}
+@media(min-width:900px){.fb-grid{grid-template-columns:1.2fr 1fr}}
+[hidden]{display:none!important}
+/* app install */
+.appbtn{background:var(--brown);color:var(--gold)}.appbtn:hover{transform:translateY(-2px);background:#5b3622}
+.appbtn img{width:24px;height:24px;border-radius:6px}
+.amod{position:fixed;inset:0;z-index:90;background:rgba(40,22,12,.6);display:grid;place-items:end center;padding:16px;backdrop-filter:blur(4px)}
+.amod[hidden]{display:none}
+.abox{background:var(--cream);width:100%;max-width:440px;border-radius:26px;padding:26px 24px 22px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);animation:up .35s cubic-bezier(.2,.8,.2,1);position:relative}
+@media(min-width:700px){.amod{place-items:center}}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.abox .ai{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+.abox .ai img{width:64px;height:64px;border-radius:16px;box-shadow:var(--shadow)}
+.abox h3{font-size:1.5rem;color:var(--red)}.abox .ai small{font-weight:700;color:var(--oak)}
+.abox ol{margin:0 0 18px 20px;display:grid;gap:10px;font-weight:700}
+.abox ol svg{width:20px;height:20px;vertical-align:-4px;color:#1a73e8}
+.abox .x{position:absolute;top:12px;right:14px;border:0;background:none;font-size:1.6rem;cursor:pointer;color:var(--oak)}
+.abox .btn{width:100%}
+footer .credit{font-size:.8rem;opacity:.75}
+@media(max-width:899px){.rays{width:900px;height:900px}.sun-glow{width:440px;height:440px;left:-170px;top:-170px}}
+@media(prefers-reduced-motion:reduce){.rays,.sun-glow,.steam span,.sheen:after,.feature h2 em,.shimmer,.eyebrow:before,.eyebrow:after,.nav .btn-red:before,.feature:before{animation:none!important}.sheen:after{display:none}.steam,#motes{display:none}.hero-pie .parallax{transform:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a class="logo sheen" style="--d:.4s" href="#top" aria-label="Betty's Country Cooking home"><img src="images/logo.webp" alt="Betty's Country Cooking" width="900" height="496"></a>
+    <ul>
+      <li><a href="#watch">Watch</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#buffet">The Buffet</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#game">Play</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+    <div class="nav-r">
+      <button class="jingle" id="jingle" type="button" aria-label="Play our jingle" aria-pressed="false">
+        <span class="ic"><svg id="jicon" viewBox="0 0 24 24" fill="#4a2a1a" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+        <span id="jtext">Play jingle</span>
+        <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      </button>
+      <audio id="jaudio" src="bettys-jingle.mp3" preload="none"></audio>
+      <a class="btn btn-red" href="tel:+12703845664"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg><span>(270) 384-5664</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero gingham">
+  <div class="fx" aria-hidden="true"><div class="sun-glow"></div><div class="rays"></div><div class="rays r2"></div><canvas id="motes"></canvas></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text reveal">
+      <a class="openpill" id="openpill" href="#visit" aria-live="polite"><span class="sky" id="sky"></span><span><b id="otxt">Checking hours&hellip;</b><small id="osub"></small></span></a>
+      <div class="eyebrow">Columbia, Kentucky</div>
+      <h1><span>Hot country buffet &amp; homemade pies</span>Save Room for Betty's</h1>
+      <p class="lead">Real country cooking, served hot for breakfast, lunch and dinner. Biscuits and gravy, fried chicken, all the fixin's &mdash; and a slice of our Famous Sand Pie to finish.</p>
+      <div class="cta">
+        <a class="btn btn-red sheen" style="--d:1.2s" href="tel:+12703845664"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg>Call Betty's</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2339+Campbellsville+Rd,+Columbia,+KY+42728" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.7 11.3l-9-9a1 1 0 00-1.4 0l-9 9a1 1 0 000 1.4l9 9a1 1 0 001.4 0l9-9a1 1 0 000-1.4zM14 14.5V12h-4v3H8v-4a1 1 0 011-1h5V7.5l3.5 3.5z"/></svg>Get Directions</a>
+        <button class="btn appbtn sheen" type="button" data-app><img src="images/icon-192.png" alt="">Get the Betty's App</button>
+      </div>
+    </div>
+    <div class="hero-pie reveal">
+      <div class="halo"></div>
+      <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="parallax"><img class="plate" src="images/sand-pie.webp" alt="A slice of Betty's Famous Sand Pie topped with whipped cream and pecans" width="1340" height="1174" fetchpriority="high"></div>
+      <div class="badge"><div><small>Home of the</small>Famous Sand Pie</div></div>
+    </div>
+  </div>
+</section>
+<div class="gingham-strip" aria-hidden="true"></div>
+
+<section class="watch" id="watch">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Come on down</div>
+      <h2>See Betty's</h2>
+      <p>Pull up hungry, leave with a grin. Take a quick look at Betty's right here in Columbia.</p>
+    </div>
+    <div class="vcard reveal sheen" style="--d:.2s">
+      <video id="bvideo" controls playsinline preload="metadata" poster="images/video-poster.jpg" width="1280" height="882">
+        <source src="betty-commercial.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Fresh American flavors</div>
+      <h2>The Menu</h2>
+      <p>Breakfast done right, every morning. Here's what's cooking at Betty's.</p>
+    </div>
+    <div class="known reveal"><span>Biscuits &amp; Gravy</span><span>Country Ham</span><span>Pancakes</span><span>Grits</span><span>Sweet Tea</span><span>The Buffet</span></div>
+    <div class="feat reveal" aria-label="Featured dishes">
+      <figure><img src="images/m/f-ham.webp" alt="Full country ham plate" loading="lazy"><figcaption><b>Full Country Ham (Penn's Famous Ham)</b><small>$10.99+</small></figcaption></figure>
+      <figure><img src="images/m/f-philly.webp" alt="Philly steak omelette" loading="lazy"><figcaption><b>Philly Steak</b><small>$8.49+</small></figcaption></figure>
+      <figure><img src="images/m/f-hothamcheese.webp" alt="Hot ham and cheese" loading="lazy"><figcaption><b>Hot Ham &amp; Cheese</b><small>$4.99</small></figcaption></figure>
+      <figure><img src="images/m/f-bologna.webp" alt="Fried bologna" loading="lazy"><figcaption><b>Fried Bologna</b><small>$7.49+</small></figcaption></figure>
+      <figure><img src="images/m/m-frenchtoast.webp" alt="French toast meal" loading="lazy"><figcaption><b>French Toast Meal</b><small>$9.99</small></figcaption></figure>
+    </div>
+    <div class="mtabs" role="tablist" id="mtabs"></div>
+    <div class="mgrid" id="mgrid" role="tabpanel"></div>
+    <p class="mnote reveal">Prices and items can change &mdash; call <a href="tel:+12703845664">(270) 384-5664</a> for lunch, dinner &amp; today's buffet.</p>
+  </div>
+</section>
+
+<section class="feature" id="sand-pie">
+  <div class="wrap feature-grid">
+    <div class="pie-wrap reveal"><img src="images/sand-pie.webp" alt="Famous Sand Pie slice on a plate" width="1340" height="1174" loading="lazy"></div>
+    <div class="reveal">
+      <div class="eyebrow">The one folks drive in for</div>
+      <h2>Our Famous <em>Sand Pie</em></h2>
+      <p>Ask anybody around Columbia about Betty's and they'll tell you about the Sand Pie. Piled high with fluffy cream and crowned with pecans, it's the slice that made us famous.</p>
+      <ul class="ticks">
+        <li>Homemade right here at Betty's</li>
+        <li>Light, creamy and topped with pecans</li>
+        <li>The best reason to save room for dessert</li>
+      </ul>
+      <a class="btn btn-gold sheen" style="--d:1s" href="tel:+12703845664">Call to ask about today's pies</a>
+    </div>
+  </div>
+</section>
+
+<section class="gingham" id="buffet">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Come hungry</div>
+      <h2>The Buffet</h2>
+      <p>A hot country buffet the way it ought to be &mdash; homestyle breakfast in the morning, and a full spread of country favorites for lunch.</p>
+    </div>
+    <div class="tabs reveal"><span>Breakfast</span><span>Lunch</span><span>Homemade Pies</span></div>
+    <div class="gallery">
+      <figure class="card reveal"><div class="ph sheen"><img src="images/breakfast-biscuits.webp" alt="Breakfast buffet with biscuits, bacon, gravy and eggs" width="1086" height="1448" loading="lazy"></div><figcaption class="cap"><b>Biscuits &amp; Bacon</b><small>Fresh biscuits, crispy bacon, eggs &amp; gravy</small></figcaption></figure>
+      <figure class="card reveal"><div class="ph sheen"><img src="images/breakfast-gravy.webp" alt="Breakfast buffet with biscuits, sausage, white gravy and brown gravy" width="999" height="1448" loading="lazy"></div><figcaption class="cap"><b>Sausage &amp; Gravy</b><small>Sausage with white &amp; brown gravy</small></figcaption></figure>
+      <figure class="card reveal"><div class="ph sheen"><img src="images/breakfast-pancakes.webp" alt="Breakfast buffet with pancakes, syrup and peaches" width="1086" height="1448" loading="lazy"></div><figcaption class="cap"><b>Pancakes &amp; Peaches</b><small>Golden pancakes, warm syrup &amp; peaches</small></figcaption></figure>
+      <figure class="card reveal"><div class="ph sheen"><img src="images/country-lunch.webp" alt="Lunch buffet with fried chicken, dressing, pulled pork, green beans and corn" width="1086" height="1448" loading="lazy"></div><figcaption class="cap"><b>Country Lunch</b><small>Fried chicken, dressing, green beans, corn &amp; more</small></figcaption></figure>
+    </div>
+    <div class="kitchen">
+      <img class="reveal" src="images/m/g-hambiscuit.webp" alt="Country ham, biscuit and gravy with eggs" loading="lazy">
+      <img class="reveal" src="images/m/g-catfish.webp" alt="Fried fish with hushpuppies and slaw" loading="lazy">
+      <img class="reveal" src="images/m/g-beans.webp" alt="Soup beans and cornbread" loading="lazy">
+      <img class="reveal" src="images/m/g-pancakes.webp" alt="Stack of pancakes with butter and syrup" loading="lazy">
+      <img class="reveal" src="images/m/g-banana.webp" alt="Banana pudding" loading="lazy">
+      <img class="reveal" src="images/m/g-desserts.webp" alt="Banana pudding and apple pie" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="pies" id="pies">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Baked from scratch</div>
+      <h2>Homemade Pies</h2>
+      <p>No meal at Betty's is finished until you've had a slice. Here's what comes out of our kitchen.</p>
+    </div>
+    <div class="pie-list">
+      <div class="pie-item star reveal sheen" style="--d:.8s"><div class="dot" aria-hidden="true">&#9733;</div><div><h3>Famous Sand Pie</h3><p>Our signature &mdash; the one everybody asks for</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#129381;</div><div><h3>Coconut Cream</h3><p>Creamy, toasted &amp; dreamy</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#127819;</div><div><h3>Lemon Meringue</h3><p>Tart, sweet &amp; sky-high</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#127822;</div><div><h3>Caramel Apple Nut</h3><p>Warm apples, caramel &amp; crunch</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#127851;</div><div><h3>Chocolate</h3><p>Rich, silky chocolate</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#127854;</div><div><h3>Butterscotch</h3><p>An old-fashioned favorite</p></div></div>
+      <div class="pie-item reveal"><div class="dot" aria-hidden="true">&#127792;</div><div><h3>Pecan</h3><p>Southern classic, loaded with pecans</p></div></div>
+    </div>
+    <p class="pie-note reveal">Pie selection varies &mdash; call ahead to see what's fresh today.</p>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Columbia's gathering place</div>
+      <h2>Where Every Meal Feels Like Coming Home</h2>
+      <p>For more than 35 years, Betty's has been a fixture on Campbellsville Road. Locals bring out-of-towners, travelers pull off the road, and regulars drive 45 minutes just for a plate.</p>
+    </div>
+    <div class="stats reveal"><div><b>35+</b><span>years serving Adair County</span></div><div><b>45 min</b><span>regulars drive for a plate</span></div><div><b>0</b><span>folks rushed out the door</span></div></div>
+    <div class="story-grid">
+      <div class="st big reveal"><img src="images/m/p-dining.webp" alt="Betty's wood-paneled dining room full of guests" loading="lazy"><div class="tx"><h3>A Place to Belong</h3><p>Wood-paneled walls, patterned tablecloths, and conversations that carry from one table to the next. Nobody gets rushed.</p></div></div>
+      <div class="st reveal"><img src="images/m/p-porch.webp" alt="Betty's front porch lit up at dusk" loading="lazy"><div class="tx"><h3>Porch Light's On</h3><p>Scratch-made food and a genuine welcome.</p></div></div>
+      <div class="st reveal"><img src="images/m/p-buffet.webp" alt="Betty's hot buffet line" loading="lazy"><div class="tx"><h3>The Kitchen</h3><p>Fried chicken, soup beans, cornbread and mashed potatoes. No shortcuts.</p></div></div>
+      <div class="st reveal"><img src="images/m/p-newroom.webp" alt="Betty's second dining room" loading="lazy"><div class="tx"><h3>Room for Everybody</h3><p>Regulars, families and travelers all get the same warm welcome.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="watch" id="more-vids">
+  <div class="wrap">
+    <div class="more-vids">
+      <div class="vc tall reveal"><video controls playsinline preload="none" poster="images/purple-poster.jpg"><source src="betty-purple.mp4" type="video/mp4"></video><p>Betty's is the place to go!</p></div>
+      <div class="vc reveal"><video controls playsinline preload="none" poster="images/sign-poster.jpg"><source src="betty-sign.mp4" type="video/mp4"></video><p>There's one you gotta try!</p><div class="poem"><p>When you're hungry for home cooking,<br>there's a place you'll wanna know about&hellip;</p><p class="since">Since 1988.</p><p>Start your mornings the right way&nbsp;&mdash;<br>breakfast all day,<br>Southern favorites,</p><p><em>but save room for dessert!</em><br>There's one you gotta try:<br>Betty's Famous Sand Pie.</p><p>Located at 2339 Campbellsville Road,<br>or call ahead.</p><p class="sig">Betty's Country Cooking,<br>where every meal feels like home.</p><p class="go">Let's go!</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="game" id="game">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Take a break</div>
+      <h2>Skillet Catch</h2>
+      <p>The sun's slinging breakfast! Catch the good stuff in your skillet. Don't catch the burnt toast.</p>
+    </div>
+    <div class="gwrap reveal" id="gwrap">
+      <canvas id="gc" width="800" height="600" aria-label="Skillet Catch game"></canvas>
+      <div class="ghud"><span id="gscore">0</span><span id="glives">&#10084;&#10084;&#10084;</span></div>
+      <div class="gov" id="gov"><div><h3 id="gtitle">Skillet Catch</h3><p id="gmsg">Slide your skillet to catch biscuits, bacon and pancakes. Three burnt toasts and you're out!</p><button class="btn btn-gold" id="gstart" type="button">Start cooking</button></div></div>
+    </div>
+    <p class="ghelp">Drag, touch, or use the arrow keys. <span id="gbest"></span></p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="eyebrow">Pull up a chair</div>
+      <h2>Visit Betty's</h2>
+      <p>Right on Campbellsville Road in Columbia. Come as you are &mdash; and come hungry.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="reveal">
+      <figure class="storefront sheen" style="--d:.6s"><img src="images/storefront.webp" alt="Betty's Country Cooking restaurant building on Campbellsville Road" width="1600" height="811" loading="lazy"><figcaption>Come on down!</figcaption></figure>
+      <div class="info">
+        <div class="sheen" style="--d:1.4s;max-width:240px;margin:0 auto 22px;border-radius:12px"><img class="lg" style="margin:0" src="images/logo.webp" alt="Betty's Country Cooking logo" width="900" height="496" loading="lazy"></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg><div><b>Address</b><a href="https://www.google.com/maps/search/?api=1&amp;query=2339+Campbellsville+Rd,+Columbia,+KY+42728" target="_blank" rel="noopener">2339 Campbellsville Rd<br>Columbia, KY 42728</a></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.6a1 1 0 01-.25 1z"/></svg><div><b>Phone</b><a href="tel:+12703845664">(270) 384-5664</a></div></div>
+        <div class="row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 10.6l3.2 3.2-1.4 1.4L11 13.4V6h2z"/></svg><div style="flex:1"><b>Hours</b>
+          <ul class="hours" id="hours"><li data-d="4"><span>Thursday</span><span>6 AM &ndash; 8 PM</span></li><li data-d="5"><span>Friday</span><span>6 AM &ndash; 8 PM</span></li><li data-d="6"><span>Saturday</span><span>6 AM &ndash; 8 PM</span></li><li data-d="0"><span>Sunday</span><span>8 AM &ndash; 3 PM</span></li><li data-d="1,2,3"><span>Mon &ndash; Wed</span><span>Call ahead</span></li></ul></div></div>
+        <div class="cta">
+          <a class="btn btn-red" href="tel:+12703845664">Call Now</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=2339+Campbellsville+Rd,+Columbia,+KY+42728" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      </div>
+      <div class="map reveal">
+        <iframe title="Map to Betty's Country Cooking, 2339 Campbellsville Rd, Columbia, KY" src="https://www.google.com/maps?q=2339%20Campbellsville%20Rd%2C%20Columbia%2C%20KY%2042728&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fb" id="facebook">
+  <div class="wrap fb-grid">
+    <div class="reveal">
+      <div class="eyebrow">Daily specials</div>
+      <h2>Follow Betty's on Facebook</h2>
+      <p>Daily specials, today's pies and good home cookin'. Scan the code or tap below.</p>
+      <div class="cta"><a class="btn btn-red sheen" href="https://www.facebook.com/BettysCountryCooking/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg>Open Facebook</a></div>
+    </div>
+    <a class="qr reveal" href="https://www.facebook.com/BettysCountryCooking/" target="_blank" rel="noopener"><img src="images/qr-facebook.webp" alt="QR code to Betty's Country Cooking on Facebook" loading="lazy"></a>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="wrap reveal">
+    <h2>Save Room for <span class="shimmer">Betty's</span></h2>
+    <p>Hot buffet. Homemade pie. Country cooking like it ought to be.</p>
+    <div class="cta"><a class="btn btn-gold sheen" style="--d:.5s" href="tel:+12703845664">Call (270) 384-5664</a></div>
+  </div>
+</section>
+</main>
+<div class="gingham-strip" aria-hidden="true"></div>
+<footer>
+  <div class="wrap f">
+    <div>&copy; Betty's Country Cooking</div>
+  </div>
+</footer>
+<div class="amod" id="amod" hidden role="dialog" aria-modal="true" aria-labelledby="atitle">
+  <div class="abox">
+    <button class="x" type="button" data-close aria-label="Close">&times;</button>
+    <div class="ai"><img src="images/icon-192.png" alt=""><div><h3 id="atitle">Get the Betty's App</h3><small>Free &middot; no app store needed</small></div></div>
+    <div id="asteps"></div>
+    <button class="btn btn-red" type="button" id="ainstall" hidden>Install Betty's</button>
+    <button class="btn btn-ghost" type="button" data-close style="margin-top:8px">Got it</button>
+  </div>
+</div>
+<button class="snd" id="snd" type="button" aria-label="Mute music"><svg id="sndic" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3.2v2.1a7 7 0 010 13.4v2.1a9 9 0 000-17.6z"/></svg></button>
+
+<div class="callbar">
+  <a class="btn btn-red" href="tel:+12703845664">Call</a>
+  <a class="btn btn-gold" href="https://www.google.com/maps/dir/?api=1&amp;destination=2339+Campbellsville+Rd,+Columbia,+KY+42728" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  els.forEach(function(el){io.observe(el);});
+  // safety net: never leave content hidden
+  setTimeout(function(){els.forEach(function(el){el.classList.add('in');});},2500);
+  window.addEventListener('beforeprint',function(){els.forEach(function(el){el.classList.add('in');});});
+})();
+(function(){
+  var b=document.getElementById('jingle'),a=document.getElementById('jaudio'),t=document.getElementById('jtext'),ic=document.getElementById('jicon'),v=document.getElementById('bvideo');
+  if(!b||!a) return;
+  var play='<path d="M8 5v14l11-7z"/>',pause='<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>';
+  function set(p){b.classList.toggle('playing',p);b.setAttribute('aria-pressed',p?'true':'false');b.setAttribute('aria-label',p?'Pause our jingle':'Play our jingle');t.textContent=p?'Now playing':'Play jingle';ic.innerHTML=p?pause:play;}
+  b.addEventListener('click',function(){if(a.paused){if(v&&!v.paused)v.pause();var pr=a.play();if(pr&&pr.catch)pr.catch(function(){set(false);});}else{a.pause();}});
+  a.addEventListener('play',function(){set(true);if(v&&!v.paused)v.pause();});
+  a.addEventListener('pause',function(){set(false);});
+  a.addEventListener('ended',function(){set(false);a.currentTime=0;});
+  if(v) v.addEventListener('play',function(){if(!a.paused)a.pause();set(false);});
+  document.querySelectorAll('video').forEach(function(x){x.addEventListener('play',function(){if(!a.paused)a.pause();document.querySelectorAll('video').forEach(function(o){if(o!==x&&!o.paused)o.pause();});});});
+  // first tap/scroll: soft fade-in at low volume, with a mute chip
+  var snd=document.getElementById('snd'),sic=document.getElementById('sndic'),started=false,muted=false;
+  var on='<path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4zM14 3.2v2.1a7 7 0 010 13.4v2.1a9 9 0 000-17.6z"/>',off='<path d="M3 9v6h4l5 5V4L7 9H3zm13.6 3l2.9-2.9-1.4-1.4-2.9 2.9-2.9-2.9-1.4 1.4 2.9 2.9-2.9 2.9 1.4 1.4 2.9-2.9 2.9 2.9 1.4-1.4z"/>';
+  function first(e){if(started)return;if(e&&e.target&&e.target.closest&&e.target.closest('#jingle,video,#gwrap,#snd'))return;started=true;a.volume=0;var p=a.play();if(p&&p.catch)p.catch(function(){started=false;});var vol=0,iv=setInterval(function(){vol+=.02;a.volume=Math.min(vol,.3);if(vol>=.3)clearInterval(iv);},120);snd.classList.add('on');rm();}
+  function rm(){['pointerdown','touchstart','scroll','keydown'].forEach(function(t){window.removeEventListener(t,first,true);});}
+  ['pointerdown','touchstart','scroll','keydown'].forEach(function(t){window.addEventListener(t,first,{capture:true,passive:true});});
+  a.addEventListener('play',function(){snd.classList.add('on');});
+  snd.addEventListener('click',function(){muted=!muted;a.muted=muted;sic.innerHTML=muted?off:on;snd.setAttribute('aria-label',muted?'Unmute music':'Mute music');if(!muted&&a.paused){a.play();}});
+  b.addEventListener('click',function(){started=true;rm();if(a.volume<.3)a.volume=.6;});
+})();
+// ===== app install =====
+(function(){
+  if('serviceWorker' in navigator&&location.protocol==='https:'){try{navigator.serviceWorker.register('sw.js').catch(function(){});}catch(e){}}
+  var m=document.getElementById('amod'),st=document.getElementById('asteps'),ib=document.getElementById('ainstall'),dp=null;
+  var standalone=(window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone;
+  if(standalone){document.querySelectorAll('[data-app]').forEach(function(b){b.hidden=true;});return;}
+  var ua=navigator.userAgent,ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var share='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>';
+  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();dp=e;ib.hidden=false;});
+  ib.onclick=function(){if(!dp)return;dp.prompt();dp.userChoice.then(function(){dp=null;ib.hidden=true;close();});};
+  function steps(){st.innerHTML=ios?'<ol><li>Tap the Share button '+share+' in Safari</li><li>Scroll down and tap <b>Add to Home Screen</b></li><li>Tap <b>Add</b>. Betty\'s is on your phone!</li></ol>'
+    :'<ol><li>Tap <b>Install Betty\'s</b> below, or</li><li>Open your browser menu <b>&#8942;</b> and tap <b>Install app</b> / <b>Add to Home screen</b></li></ol>';}
+  function open(){steps();m.hidden=false;}function close(){m.hidden=true;}
+  document.querySelectorAll('[data-app]').forEach(function(b){b.addEventListener('click',open);});
+  m.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',close);});
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  if(/[?&]app=1/.test(location.search))setTimeout(open,700);
+})();
+// ===== open / closed (Columbia, KY = Central time) =====
+(function(){
+  var pill=document.getElementById('openpill');if(!pill)return;
+  var H={4:[6,20],5:[6,20],6:[6,20],0:[8,15]},N=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var SUN='<svg class="sunsvg" viewBox="0 0 100 100"><g class="srays" fill="#f6a21a">'+Array.from({length:12},function(_,i){return '<path transform="rotate('+(i*30)+' 50 50)" d="M44 14 L50 2 L56 14Z"/>';}).join('')+'</g><circle cx="50" cy="50" r="31" fill="#f15a24"/><circle cx="45" cy="45" r="21" fill="#ff8a3d"/><ellipse cx="40" cy="45" rx="6" ry="8" fill="#fff"/><ellipse cx="60" cy="45" rx="6" ry="8" fill="#fff"/><circle cx="41.5" cy="46" r="3.2"/><circle cx="61.5" cy="46" r="3.2"/><path d="M40 59 Q50 69 60 59" stroke="#5a1a00" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>';
+  var MOON='<svg class="moonsvg" viewBox="0 0 100 100"><path class="tw" d="M18 22l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#fff6c8"/><path class="tw" d="M80 70l1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5z" fill="#fff6c8"/><path d="M62 18a34 34 0 1 0 22 52A28 28 0 0 1 62 18z" fill="#ffe28a"/><path d="M38 50 q4 4 8 0" stroke="#7a5a10" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M50 60 q4 4 8 0" stroke="#7a5a10" stroke-width="3" fill="none" stroke-linecap="round" opacity="0"/><path d="M40 64 Q47 69 54 64" stroke="#7a5a10" stroke-width="3" fill="none" stroke-linecap="round"/><text x="70" y="40" font-size="12" font-weight="800" fill="#cfd6ff" font-family="sans-serif">z</text><text x="78" y="30" font-size="9" font-weight="800" fill="#cfd6ff" font-family="sans-serif">z</text></svg>';
+  function fmt(h){return (h%12||12)+(h<12?' AM':' PM');}
+  function now(){var p={};new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});return {d:['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(p.weekday),h:(+p.hour%24)+(+p.minute)/60};}
+  function next(d,h){for(var i=0;i<8;i++){var dd=(d+i)%7,r=H[dd];if(r&&(i>0||h<r[0]))return (i===0?'today':i===1?'tomorrow':N[dd])+' at '+fmt(r[0]);}return '';}
+  function upd(){var n=now(),r=H[n.d],o=document.getElementById('otxt'),s=document.getElementById('osub'),sky=document.getElementById('sky');
+    document.querySelectorAll('#hours li').forEach(function(li){li.classList.toggle('today',li.getAttribute('data-d').split(',').indexOf(String(n.d))>-1);});
+    if(r&&n.h>=r[0]&&n.h<r[1]){pill.className='openpill open';sky.innerHTML=SUN;o.textContent="We're open!";s.textContent='Until '+fmt(r[1])+' today';}
+    else if(!r){pill.className='openpill open';sky.innerHTML=SUN;o.textContent='Call ahead today';s.textContent='(270) 384-5664';}
+    else{pill.className='openpill closed';sky.innerHTML=MOON;o.textContent="We're closed right now";s.textContent='Back '+next(n.d,n.h);}}
+  upd();setInterval(upd,60000);
+})();
+// ===== menu =====
+(function(){
+  var M={
+  'Breakfast Meals':[['Bacon','Served with choice of toast or gravy biscuits, and eggs your way.','$7.49+','m-bacon'],['Tenderloin','Tenderloin with your choice of bread: white, wheat or rye toast.','$7.99+','m-tenderloin'],['Sausage','Served with your choice of bread and eggs.','$7.49+','m-sausage'],['Full Country Ham (Penn\'s Famous Ham)','With potatoes.','$10.99+','f-ham'],['Links','Two savory sausage links with your choice of bread and eggs.','$7.49+',''],['Fried Bologna','Sliced bologna served with your choice of bread.','$7.49+','m-bologna'],['Half Country Ham (Penn\'s Famous Ham)','Penn\'s famous ham with your choice of bread and egg style.','$7.99+','']],
+  'Pancakes & More':[['French Toast Meal','With 2 eggs & choice of bacon or sausage.','$9.99','m-frenchtoast'],['French Toast','Bread dipped in a sweet egg batter, grilled golden brown.','$5.99',''],['Pancake Meal','With 2 eggs & choice of bacon or sausage.','$9.99','m-pancakemeal'],['4 Small Pancakes','Four small pancakes with butter and syrup.','$5.29','m-smallpancakes'],['Cinnamon Roll','Warmed & topped with icing.','$5.49','m-cinnamon'],['Big Pancake','One big pancake with butter and real maple syrup.','$5.99','m-bigpancake']],
+  'Breakfast Sandwiches':[['Double BLT','Twice the bacon, with lettuce, tomato and mayo.','$8.99','m-doubleblt'],['BLT','Crispy bacon, fresh lettuce and tomato on toasted bread.','$5.99','m-blt'],['Hot Ham & Cheese','Grilled ham and melted cheddar on toasted sourdough.','$4.99','f-hothamcheese'],['Fried Bologna','Sliced bologna on your choice of toast or bun.','$4.99','m-bolognasand'],['Tenderloin','Tenderloin breakfast sandwich on your choice of bread.','$5.49','m-tenderloinsand'],['Country Ham (Penn\'s Famous Ham)','Penn\'s famous country ham on white, wheat or rye toast.','$5.49',''],['2-Egg','Two eggs on your choice of toast or bun.','$3.99','m-2egg'],['Breakfast Wrap','Egg, bacon or sausage, shredded cheese and diced tomato.','$7.49','m-wrap'],['Bacon','Bacon on white, bun, wheat or rye.','$4.99','m-baconsand'],['Sausage','Sausage patty on white, whole wheat or rye.','$4.99','m-sausagesand']],
+  'Omelettes':[['Ham & Cheese','Savory ham and melted cheese with your choice of bread.','$7.99+','o-hamcheese'],['Western','Classic omelette with toast, biscuits, or gravy.','$7.99+','o-western'],['Philly Steak','Steak omelette with your choice of bread.','$8.49+','o-philly'],['Sausage','Sausage omelette with toast, biscuits or gravy.','$7.99+','o-sausage'],['Veggie','Egg omelette with mixed vegetables.','$7.49+','o-veggie'],['Cheese','Cheese omelette with your choice of toast or biscuits.','$6.99+','o-cheese'],['Bacon','Crispy bacon omelette with your choice of bread.','$7.99+','o-bacon']]};
+  var tabs=document.getElementById('mtabs'),grid=document.getElementById('mgrid');if(!tabs)return;
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function show(k){[].forEach.call(tabs.children,function(b){b.setAttribute('aria-selected',b.textContent===k?'true':'false');});
+    grid.innerHTML=M[k].map(function(i,n){return '<article class="mi" style="animation-delay:'+(n*.04)+'s"><div class="t"><h3>'+esc(i[0])+'</h3><p>'+esc(i[1])+'</p><span class="pr">'+i[2]+'</span></div>'+(i[3]?'<img src="images/m/'+i[3]+'.webp" alt="'+esc(i[0])+'" loading="lazy">':'')+'</article>';}).join('');}
+  Object.keys(M).forEach(function(k,i){var b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.textContent=k;b.onclick=function(){show(k);};tabs.appendChild(b);});
+  show('Breakfast Meals');
+})();
+// ===== Skillet Catch =====
+(function(){
+  var c=document.getElementById('gc');if(!c)return;var x=c.getContext('2d'),W=800,H=600;
+  var ov=document.getElementById('gov'),st=document.getElementById('gstart'),sc=document.getElementById('gscore'),lv=document.getElementById('glives'),ti=document.getElementById('gtitle'),ms=document.getElementById('gmsg'),be=document.getElementById('gbest');
+  var GOOD=['🥞','🥓','🍳','🧈','🍗','🥧','☕'],best=0;
+  try{best=+localStorage.getItem('bettysBest')||0;}catch(e){}
+  function showBest(){be.textContent=best?'Best: '+best:'';}showBest();
+  var pan={x:W/2,w:150},items=[],score=0,lives=3,running=false,t=0,sunX=W/2,sunDir=1,spawn=0,parts=[],last=0,keys={};
+  function biscuit(px,py,s){x.save();x.translate(px,py);x.fillStyle='#e8b86b';x.beginPath();x.ellipse(0,0,s*.55,s*.42,0,0,7);x.fill();x.fillStyle='#f7dca0';x.beginPath();x.ellipse(0,-s*.1,s*.45,s*.22,0,0,7);x.fill();x.restore();}
+  function toast(px,py,s,r){x.save();x.translate(px,py);x.rotate(r);x.fillStyle='#2b1a10';x.beginPath();x.roundRect?x.roundRect(-s*.45,-s*.45,s*.9,s*.9,s*.2):x.rect(-s*.45,-s*.45,s*.9,s*.9);x.fill();x.fillStyle='#120a05';x.fillRect(-s*.3,-s*.3,s*.6,s*.6);x.restore();x.fillStyle='rgba(90,90,90,.45)';for(var i=0;i<3;i++){x.beginPath();x.arc(px-8+i*8,py-s*.6-((t*40+i*13)%18),5,0,7);x.fill();}}
+  function sun(){var y=70;x.save();x.translate(sunX,y);x.rotate(t*.6);x.fillStyle='#f6a21a';for(var i=0;i<12;i++){x.rotate(Math.PI/6);x.beginPath();x.moveTo(44,-9);x.lineTo(66,0);x.lineTo(44,9);x.fill();}x.restore();
+    x.fillStyle='#f15a24';x.beginPath();x.arc(sunX,y,44,0,7);x.fill();x.fillStyle='#ff8a3d';x.beginPath();x.arc(sunX-8,y-8,30,0,7);x.fill();
+    x.fillStyle='#fff';x.beginPath();x.ellipse(sunX-14,y-6,9,12,0,0,7);x.ellipse(sunX+14,y-6,9,12,0,0,7);x.fill();x.fillStyle='#000';x.beginPath();x.arc(sunX-12+sunDir*2,y-4,4.5,0,7);x.arc(sunX+16+sunDir*2,y-4,4.5,0,7);x.fill();
+    x.strokeStyle='#5a1a00';x.lineWidth=4;x.lineCap='round';x.beginPath();x.arc(sunX,y+10,14,.2,Math.PI-.2);x.stroke();}
+  function skillet(){var px=pan.x,y=H-50,w=pan.w;x.save();x.fillStyle='rgba(0,0,0,.18)';x.beginPath();x.ellipse(px,y+28,w*.55,10,0,0,7);x.fill();
+    x.fillStyle='#2a2a2a';x.fillRect(px+w*.45,y-6,w*.55,14);x.fillStyle='#3b3b3b';x.beginPath();x.ellipse(px,y,w*.5,24,0,0,7);x.fill();x.fillStyle='#161616';x.beginPath();x.ellipse(px,y-4,w*.42,16,0,0,7);x.fill();x.restore();}
+  function bg(){var g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#ffe29a');g.addColorStop(1,'#fff6e3');x.fillStyle=g;x.fillRect(0,0,W,H);
+    x.fillStyle='#a8322d';for(var i=0;i<W;i+=40){for(var j=0;j<2;j++){x.globalAlpha=(i/40+j)%2?.18:.32;x.fillRect(i,H-40+j*20,40,20);}}x.globalAlpha=1;}
+  function add(){var bad=Math.random()<Math.min(.18+score*.004,.38);items.push({x:sunX,y:100,vx:(Math.random()-.5)*2.4,vy:2+Math.min(score*.05,5)+Math.random()*1.5,bad:bad,e:bad?0:GOOD[Math.random()*GOOD.length|0],bis:!bad&&Math.random()<.3,r:Math.random()*6,s:46});}
+  function burst(px,py,col){for(var i=0;i<12;i++)parts.push({x:px,y:py,vx:(Math.random()-.5)*7,vy:-Math.random()*6,l:1,c:col});}
+  function hud(){sc.textContent=score;lv.textContent='❤'.repeat(Math.max(lives,0))+'♡'.repeat(3-Math.max(lives,0));}
+  function end(){running=false;if(score>best){best=score;try{localStorage.setItem('bettysBest',best);}catch(e){}}showBest();ti.textContent='You caught '+score+'!';ms.innerHTML='Now come get the real thing at Betty\'s. Call <a style="color:#f2c14e" href="tel:+12703845664">(270) 384-5664</a>.';st.textContent='Play again';ov.hidden=false;}
+  function loop(ts){var dt=Math.min((ts-(last||ts))/16.67,3);last=ts;t+=dt/60;
+    if(running){sunX+=sunDir*(2+score*.03)*dt;if(sunX<70||sunX>W-70)sunDir*=-1;if(Math.random()<.01)sunDir*=-1;
+      if(keys.L)pan.x-=11*dt;if(keys.R)pan.x+=11*dt;pan.x=Math.max(pan.w/2,Math.min(W-pan.w/2,pan.x));
+      spawn-=dt;if(spawn<=0){add();spawn=Math.max(55-score*.8,22);}
+      for(var i=items.length-1;i>=0;i--){var o=items[i];o.x+=o.vx*dt;o.y+=o.vy*dt;o.vy+=.04*dt;o.r+=.05*dt;if(o.x<30||o.x>W-30)o.vx*=-1;
+        if(o.y>H-75&&o.y<H-30&&Math.abs(o.x-pan.x)<pan.w*.5){items.splice(i,1);if(o.bad){lives--;burst(o.x,o.y,'#333');if(lives<=0)end();}else{score++;burst(o.x,o.y,'#f2c14e');}hud();continue;}
+        if(o.y>H+40){items.splice(i,1);}}}
+    bg();sun();items.forEach(function(o){if(o.bad)toast(o.x,o.y,o.s,o.r);else if(o.bis)biscuit(o.x,o.y,o.s);else{x.save();x.translate(o.x,o.y);x.rotate(Math.sin(o.r)*.3);x.font='44px serif';x.textAlign='center';x.textBaseline='middle';x.fillText(o.e,0,0);x.restore();}});
+    for(var k=parts.length-1;k>=0;k--){var p=parts[k];p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=.3*dt;p.l-=.03*dt;if(p.l<=0){parts.splice(k,1);continue;}x.globalAlpha=p.l;x.fillStyle=p.c;x.beginPath();x.arc(p.x,p.y,5,0,7);x.fill();}x.globalAlpha=1;
+    skillet();requestAnimationFrame(loop);}
+  function pos(e){var r=c.getBoundingClientRect(),cx=(e.touches?e.touches[0].clientX:e.clientX);pan.x=(cx-r.left)/r.width*W;}
+  c.addEventListener('pointermove',pos);c.addEventListener('pointerdown',pos);c.addEventListener('touchmove',function(e){pos(e);e.preventDefault();},{passive:false});
+  window.addEventListener('keydown',function(e){if(!running)return;if(e.key==='ArrowLeft'){keys.L=1;e.preventDefault();}if(e.key==='ArrowRight'){keys.R=1;e.preventDefault();}});
+  window.addEventListener('keyup',function(e){if(e.key==='ArrowLeft')keys.L=0;if(e.key==='ArrowRight')keys.R=0;});
+  st.addEventListener('click',function(){items=[];parts=[];score=0;lives=3;spawn=20;hud();ov.hidden=true;running=true;});
+  hud();requestAnimationFrame(loop);
+})();
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sh=document.querySelectorAll('.sheen');
+  // stagger cards in a group
+  document.querySelectorAll('.gallery .ph.sheen').forEach(function(el,i){el.style.setProperty('--d',(i*.35)+'s');});
+  if(reduce) return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('lit',e.isIntersecting);});},{threshold:.2});
+    sh.forEach(function(el){io.observe(el);});
+  } else sh.forEach(function(el){el.classList.add('lit');});
+  // hero parallax
+  var px=document.querySelector('.hero-pie .parallax'),hero=document.querySelector('.hero'),tick=false;
+  function onScroll(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;var y=window.scrollY;if(y<hero.offsetHeight+200&&px){px.style.transform='translate3d(0,'+(y*.12).toFixed(1)+'px,0)';}});}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  // dust motes canvas
+  var c=document.getElementById('motes');if(!c||!c.getContext)return;
+  var vis=true,ctx=c.getContext('2d'),W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,2),P=[],run=false,raf=0;
+  function size(){var r=c.getBoundingClientRect();W=r.width;H=r.height;c.width=W*dpr;c.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);}
+  function mk(){var n=W<600?22:40;P=[];for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.8+.6,vx:(Math.random()*.25+.05),vy:(Math.random()*.2+.05),a:Math.random()*Math.PI*2,s:Math.random()*.02+.008});}
+  function frame(){ctx.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var p=P[i];p.x+=p.vx;p.y+=p.vy;p.a+=p.s;if(p.x>W+5||p.y>H+5){p.x=Math.random()*W*.5-5;p.y=-5;}
+    // brighter near the sun corner
+    var near=Math.max(0,1-Math.hypot(p.x,p.y)/(Math.max(W,H)*.9));var al=(.25+.6*near)*(.55+.45*Math.sin(p.a));
+    ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fillStyle='rgba(255,236,170,'+al.toFixed(3)+')';ctx.fill();}
+    if(run)raf=requestAnimationFrame(frame);}
+  size();mk();
+  window.addEventListener('resize',function(){size();mk();});
+  function start(){if(!run){run=true;raf=requestAnimationFrame(frame);}}
+  function stop(){run=false;cancelAnimationFrame(raf);}
+  if('IntersectionObserver' in window){new IntersectionObserver(function(es){vis=es[0].isIntersecting;vis?start():stop();}).observe(hero);}else start();
+  document.addEventListener('visibilitychange',function(){(document.hidden||!vis)?stop():start();});
+})();
+</script>
+</body>
+</html>
